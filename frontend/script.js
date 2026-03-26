@@ -1,5 +1,5 @@
 function sendData() {
-  fetch('/api')
+  fetch('http://myfirstalb-162822641.ap-south-2.elb.amazonaws.com/api/health')
     .then(res => res.json())
     .then(data => {
       document.getElementById("response").innerText = data.message;
