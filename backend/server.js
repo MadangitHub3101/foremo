@@ -6,7 +6,7 @@ const PORT = 5000;
 // Simple API route
 app.get('/api/health', (req, res) => {
   res.json({
-    message: "Thank you teju, backend is working :)"
+    message: "goodmorning teju, backend is working :)"
   });
 });
 
