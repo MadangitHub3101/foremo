@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 resource "aws_security_group" "web_sg" {
-  name = "foremo-sg"
+  name = "foremo-sg-1"
 
   ingress {
     from_port   = 22
