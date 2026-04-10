@@ -36,7 +36,7 @@ resource "aws_security_group" "web_sg" {
 
 resource "aws_instance" "foremo" {
   ami           = "ami-0f58b397bc5c1f2e8"
-  instance_type = "t2.micro"
+  instance_type = "t3.micro"
 
   security_groups = [aws_security_group.web_sg.name]
 
