@@ -1,12 +1,13 @@
-# Use NGINX as base
-FROM nginx:latest
+FROM nginx:alpine
 
-# Copy all frontend files to NGINX html folder
-COPY . /usr/share/nginx/html
+# Copy static files
+COPY index.html /usr/share/nginx/html/
+COPY script.js /usr/share/nginx/html/
 
-
+# Copy fixed nginx config
 COPY nginx.conf /etc/nginx/conf.d/default.conf
-# Expose port 80 for ECS / ALB
+
+# DigitalOcean needs port 8080
 EXPOSE 80
 
-# NGINX runs automatically by default
+CMD ["nginx", "-g", "daemon off;"]
