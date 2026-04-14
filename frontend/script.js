@@ -1,5 +1,5 @@
 function sendData() {
-  fetch('http://myfirstalb-162822641.ap-south-2.elb.amazonaws.com/api/health')
+  fetch('https://firstcoral-app-z626d.ondigitalocean.app/api/health')
     .then(res => res.json())
     .then(data => {
       document.getElementById("response").innerText = data.message;
